@@ -1,0 +1,15 @@
+{% extends 'homepage/base.html' %}
+{% block content %}
+    <h1>Messages</h1>
+        {% for message in sender_qs %}
+            <a href="{% url 'message-form' message.sender.username %}" id='black-link'>
+                <div class='container'>
+                    <img class='rounded-circle like-image' src="{{message.sender.profile.image.url}}"> - {{ message.sender }} <strong>{{ message.content }}</strong> {{ message.date_created|date:"M d Y h:i A" }}
+
+                </div>
+            </a>
+        {% empty %}
+            <h3>No messages!</h3>
+    {% endfor %}
+
+{% endblock content %}

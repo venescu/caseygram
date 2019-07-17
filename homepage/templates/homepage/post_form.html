@@ -1,0 +1,26 @@
+{% extends 'homepage/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form id="post_form" method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% for hidden in postForm.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+
+    {% for field in postForm %}
+        {{ field }} <br />
+    {% endfor %}
+    <h5> To submit a post, a photo must be attached to first image box </h5>
+
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form|crispy }}
+    {% endfor %}
+
+
+    <input type="submit" name="submit" value="Submit" />
+</form>
+{% endblock content %}
+
+

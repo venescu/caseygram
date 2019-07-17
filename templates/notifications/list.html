@@ -1,0 +1,13 @@
+{% extends 'homepage/base.html' %}
+{% block content %}
+<h1>Notifications</h1>
+{% for notice in notifications %}
+        <div class='notify-div'>
+         {% include 'notifications/notice.html' %}
+        </div>
+
+{% empty %}
+<h2> No notifications! </h2>
+{% endfor %}
+
+{% endblock content %}

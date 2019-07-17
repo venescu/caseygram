@@ -1,0 +1,31 @@
+{% extends 'homepage/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class='container'>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="row input-group mb-3 justify-content-center">
+                {{ form }}
+            <div class='input-group-append'>
+                <button class='btn btn-outline-info' type='submit' >Send</button>
+            </div>
+            </fieldset>
+        </form>
+    </div>
+    {% for message in receiver_message_objects %}
+        {% if message.sender == user %}
+            <p class="container message-green-text">
+                {{message.content}}
+                <i>{{message.date_created}}</i>
+
+                 <b>{{message.sender}}</b>
+            </p>
+        {% else %}
+            <p class="container message-white-text">
+                <b> {{message.sender}}</b>
+                <i>{{message.date_created}} </i>{{message.content}}
+            </p>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
+
