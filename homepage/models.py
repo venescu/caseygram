@@ -26,16 +26,6 @@ class PostImage(models.Model):
     post = models.ForeignKey(Post, related_name='images', on_delete=models.CASCADE)
     modelimage = models.ImageField(upload_to='post_images')
 
-    # def save(self, *args, **kwargs):
-    #     super(PostImage, self).save(*args, **kwargs)
-
-    #     img = Image.open(self.modelimage.name)  # will open the image path of the current image
-
-    #     if img.width > 640:
-    #         output_size = (640, 640)
-    #         img.thumbnail(output_size, Image.ANTIALIAS)
-    #         img.save(self.modelimage.name)  # I think that problem comes because in the s3boto storage class, the path() method is not implemented. As per the Django documentation, For storage systems that aren’t accessible from the local filesystem, this will raise NotImplementedError instead.
-
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)

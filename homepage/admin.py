@@ -7,10 +7,6 @@ class PostImageInLine(admin.TabularInline):
     extra = 3
 
 
-# class CommentInLine(admin.StackedInline):
-#     model = Comment
-
-
 class PostAdmin(admin.ModelAdmin):
     inlines = [PostImageInLine]
 

@@ -6,5 +6,4 @@ from .views import MessageCreateView, InboxListView
 urlpatterns = [
     path('new/<username>', MessageCreateView.as_view(), name='message-form'),
     path('inbox/', InboxListView.as_view(), name='inbox-list'),
-    # path('inbox/<int:pk>', InboxDetailView.as_view(), name='inbox-detail'),
 ]

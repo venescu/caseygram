@@ -16,24 +16,14 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    # def save(self, *args, **kwargs):
-    #     super(Profile, self).save(*args, **kwargs)
-
-    #     img = Image.open(self.image.path)  # will open the image path of the current image
-
-    #     if img.height > 250 or img.width > 300:
-    #         output_size = (250, 250)
-    #         img.thumbnail(output_size)
-    #         img.save(self.image.path)
-
 
 class Follower(models.Model):
     follower = models.ForeignKey(User, on_delete=models.CASCADE, related_name='followers')
     being_followed = models.ForeignKey(User, on_delete=models.CASCADE, related_name='being_followeds')
     date_followed = models.DateTimeField(default=timezone.now)
 
-    # def __str__(self):
-    #     return f'{self.follower.username, self.being_followed.username} follower-> followee'
+    def __str__(self):
+        return f'{self.follower.username, self.being_followed.username} follower-> followee'
 
     def save(self, *args, **kwargs):
         super(Follower, self).save(*args, **kwargs)

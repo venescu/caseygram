@@ -1,13 +1,14 @@
 
 {% extends 'homepage/base.html' %}
 {% block content %}
-<h6> Newest accounts</h6>
+{% if profiles %}
+    <h6> Newest accounts</h6>
+{% endif %}
 {% for profile in profiles %}
     <div class="d-inline-block bg-white">
         <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
             {{profile.user.username}}
-<!--             {{profile.first_name}}{{profile.last_name}} -->
         </a>
 
             {% if profile.user.username in followlist %}
