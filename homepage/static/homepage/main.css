@@ -20,6 +20,11 @@
   text-decoration:none;
 }
 
+#black-link {
+  color: black;
+  text-decoration: none;
+}
+
 .like-image{
   height: 54px;
   width: 54px;
@@ -155,10 +160,7 @@ small {
   margin-bottom: 16px;
 }
 
-#black-link {
-  color: black;
-  text-decoration: none;
-}
+
 
 
 .message-green-text {

@@ -7,11 +7,11 @@
     {% for p in posts %}
         {% for f in followers %}
                 {% if p.author.username == f.being_followed.username %}
-        <img class="rounded-circle article-img" src= "{{ p.author.profile.image.url }}">
+                    <a href="{% url 'public-profile' p.author.username %}" id="author-link">
 
-    <a href="{% url 'public-profile' p.author.username %}" id="author-link">
-        <strong>{{ p.author }}</strong>
-    </a>
+                        <img class="rounded-circle article-img" src= "{{ p.author.profile.image.url }}">
+                        <strong>{{ p.author }}</strong>
+                    </a>
         {% if p.images.count > 1 %}
             <div id="carousel-{{p.id}}" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
                 <ol class="carousel-indicators">
