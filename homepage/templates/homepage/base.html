@@ -37,30 +37,37 @@
 
 
 <body>
-    <!-- nav bar from bootstrap template at https://getbootstrap.com/docs/4.0/components/navbar/ that i will cutomize. In the future i want to code html by hand for various reasons -->
+
 
     <!-- nav bar brand (Camera icon and text 'Caseygram') -->
     {% if user.is_authenticated %}
     <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-        <div class="d-flex container" id='navbar'>
-            <div class="d-flex justify-content-start">
+
+        <div class="container" id='navbar'>
+
+            <div class="justify-content-start">
                 <a class="navbar-brand" href="/">
                     <img src="https://freeiconshop.com/wp-content/uploads/edd/camera-flat.png" width='30' height='30' alt=''>
                     <span id='bar-brand'>|</span>
                     <span class='align-bottom' id='cur-brand'>Caseygram</span>
                 </a>
             </div>
-            <div class="d-flex justify-content-center">
-                    <div class='form-row d-flex justify-content-center'>
-                        <form action="{% url 'search-list' %}" method='GET'>
-                            <input name='q' type='text' placeholder='Search...' class='form-control-sm' id='search-bar' autocomplete="off">
-                        </form>
-                    </div>
 
+            <div class="justify-content-center">
+                <form action="{% url 'search-list' %}" method='GET'>
+                    <input name='q' type='text' placeholder='Search...' class='form-control-sm' id='search-bar' autocomplete="off">
+                </form>
             </div>
 
-            <div class="d-flex justify-content-end">
-                <ul class="navbar-nav">
+
+            <div class="justify-content-end">
+                <button class="navbar-toggler btn-link" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+
+                <ul class="navbar-nav list-inline">
                     <li class="nav-item">
                         <a href="{% url 'post-add' %}">
                             <span class="fas fa-camera"></span>
@@ -81,7 +88,6 @@
                             <span class="fas fa-user"></span>
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a href="{% url 'inbox-list' %}">
                             <span class="far fa-paper-plane"></span>
@@ -101,10 +107,13 @@
                     </li>
                     {% endif %}
                 </ul>
+
             </div>
         </div>
+
     </nav>
 {% endif %}
+
 
     <div class='mt-5'></div>
     <br></br>
@@ -117,8 +126,8 @@
         {% endif %}
 
         <main role="main" class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-auto padding-0">
+            <div class="row">
+                <div class="col-md-7 feed col-centered padding-0">
                     {% block content %}
                     {% endblock content %}
                </div>

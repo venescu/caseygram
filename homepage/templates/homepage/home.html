@@ -3,9 +3,9 @@
 {% load humanize %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class='col-md-auto padding-0' id='post'>
     {% for p in posts %}
         {% for f in followers %}
+
                 {% if p.author.username == f.being_followed.username %}
                     <a href="{% url 'public-profile' p.author.username %}" id="author-link">
 
@@ -51,7 +51,7 @@
     {% else %}
         {% for image in p.images.all %}
                 <div>
-                    <img src="{{ image.modelimage.url }}" alt='image'>
+                    <img src="{{ image.modelimage.url }}" class="fit-image" alt='image'>
                 </div>
         {% endfor %}
     {% endif %}
@@ -146,7 +146,7 @@
     {% endif %}
     {% endfor %}
     {% endfor %}
-    </div>
+
     <div class='d-flex justify-content-center'>
     {% if is_paginated %}
         {% if page_obj.has_previous %}
