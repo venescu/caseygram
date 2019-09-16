@@ -31,11 +31,6 @@
 
 
     </head>
-
-
-
-
-
 <body>
 
 
@@ -52,22 +47,19 @@
                     <span class='align-bottom' id='cur-brand'>Caseygram</span>
                 </a>
             </div>
-
-            <div class="justify-content-center">
+<!--
+            <div class="collapse navbar-collapse" id="navbarText"> -->
+            <div class="multi-collapse collapse justify-content-center" id="collapse2"
                 <form action="{% url 'search-list' %}" method='GET'>
-                    <input name='q' type='text' placeholder='Search...' class='form-control-sm' id='search-bar' autocomplete="off">
+                    <input name='q' type='text' placeholder='Search...' class='form-control' id='search-bar' autocomplete="off">
                 </form>
             </div>
+        <!-- </div> -->
 
 
-            <div class="justify-content-end">
-                <button class="navbar-toggler btn-link" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
-                </button>
-
-            <div class="collapse navbar-collapse" id="navbarText">
-
-                <ul class="navbar-nav list-inline">
+            <!-- <div class="collapse navbar-collapse" id="navbarText"> -->
+            <div class="justify-content-end collapse multi-collapse" id="collapse1">
+                <ul class="navbar-nav list-inline" >
                     <li class="nav-item">
                         <a href="{% url 'post-add' %}">
                             <span class="fas fa-camera"></span>
@@ -109,8 +101,12 @@
                 </ul>
 
             </div>
-        </div>
 
+        <!-- </div> -->
+            <button class="navbar-toggler btn-link" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="collapse2 collapse1" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
+            </button>
+</div>
     </nav>
 {% endif %}
 
@@ -127,10 +123,11 @@
 
         <main role="main" class="container">
             <div class="row">
-                <div class="col-md-7 feed col-centered padding-0">
+                    <div class="col-md-8 feed col-centered padding-0">
+
                     {% block content %}
                     {% endblock content %}
-               </div>
+                </div>
            </div>
        </main>
 </body>

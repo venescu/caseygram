@@ -2,9 +2,7 @@
   color:black;
 }
 
-.comment-text{
-  word-wrap: break-word;
-}
+
 #cur-brand {
     font-family: 'Kaushan Script', cursive;
     color: black;
@@ -215,6 +213,10 @@ small {
 }
 
 .follow-button {
+  background-color: #55CB93;
+}
+
+.green-button {
   background-color: #55CB93;
 }
 

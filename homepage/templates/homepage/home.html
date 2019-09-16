@@ -3,6 +3,8 @@
 {% load humanize %}
 {% load crispy_forms_tags %}
 {% block content %}
+
+
     {% for p in posts %}
         {% for f in followers %}
 
@@ -172,5 +174,7 @@
         {% endif %}
     {% endif %}
 </div>
+
+
 {% endblock content %}
 

@@ -2,10 +2,10 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
 {% if profiles %}
-    <h6> Newest accounts</h6>
+    <h6><strong> Newest accounts</strong></h6>
 {% endif %}
 {% for profile in profiles %}
-    <div class="d-inline-block bg-white">
+    <div class="d-inline-block align-items-center">
         <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
             {{profile.user.username}}
@@ -18,7 +18,7 @@
             {% endif %}
 
 
-    </div>
+</div>
 {% endfor %}
 <div><b id='explore-text'>Explore</b></div>
 <div class='row'>
