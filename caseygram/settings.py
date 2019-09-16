@@ -146,8 +146,8 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-SECRET_KEY = "(7p#np(=8uxhxrgeeq+e5v7t!@^zbn34=*i)i$9qkj5!*)jyl#" #fix this
-DEBUG = True
+SECRET_KEY = "(7p#np(=8uxhxrgeeq+e5v7t!@^zbn34=*i)i$9qkj5!*)jyl#"  # fix this
+DEBUG = False
 
 
 AWS_S3_FILE_OVERWRITE = False
