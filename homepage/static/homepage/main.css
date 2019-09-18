@@ -232,7 +232,7 @@ body {
     padding-top: 65px;
 }
 
-@media (max-width: 480px){
+@media (min-width: 480px){
     footer {
         display : none;
         visibility : hidden;
