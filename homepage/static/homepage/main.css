@@ -232,9 +232,13 @@ body {
     padding-top: 65px;
 }
 
-@media (min-width: 480px){
-    footer {
+@media (min-width: 992px){
+    .nav-footer {
         display : none;
         visibility : hidden;
     }
+}
+
+.navbar-footer>li {          /* <- this affects just my footer navbar */
+    display: inline-block;
 }

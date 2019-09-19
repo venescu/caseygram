@@ -119,57 +119,51 @@
        </main>
 
 
-    <footer>
-  <!-- Footer Elements -->
-        <div class="container">
+<nav class="navbar fixed-bottom navbar-light bg-light navbar-expand">
 
-    <!-- Grid row-->
-            <div class="row">
-
-      <!-- Grid column -->
-                <div class="col-md-12 justify-space-evenly">
-
-
-
+                <ul class="navbar-nav nav-fill w-100  navbar-footer" >
+                    <li class="nav-item">
                         <a href="{% url 'post-add' %}">
                             <span class="fas fa-camera"></span>
                         </a>
-
+                    </li>
+                    <li class="nav-item">
                         <a href="{% url 'caseygram-explore' %}">
                             <span class="fas fa-compass"></span>
                         </a>
-
+                    </li>
+                    <li class="nav-item">
                         <a href="{% url 'notifications:unread' %}">
                             <span class="fas fa-heart"></span>
                         </a>
-
+                    </li>
+                    <li class="nav-item">
                         <a href="{% url 'public-profile' request.user.username %}">
                             <span class="fas fa-user"></span>
                         </a>
-
+                    </li>
+                    <li class="nav-item">
                         <a href="{% url 'inbox-list' %}">
                             <span class="far fa-paper-plane"></span>
                         </a>
-
+                    </li>
                     {% if user.is_authenticated %}
-
+                    <li class="nav-item">
                         <a href="{% url 'logout' %}">
                             <span class="fas fa-sign-out-alt"></span>
                         </a>
-
+                    </li>
                     {% else %}
-
+                    <li class="nav-item">
                         <a href="{% url 'login' %}">
                             <span class="fas fa-sign-in-alt"></span>
                         </a>
-
+                    </li>
                     {% endif %}
 
+                </ul>
 
-            </div>
-  </div>
-</div>
-    </footer>
+</nav>
 </body>
 
     <!-- Optional JavaScript -->
