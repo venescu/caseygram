@@ -34,7 +34,7 @@
 <body>
 
 
-    {% if user.is_authenticated %}
+
     <nav class="navbar navbar-expand fixed-top navbar-custom">
         <div class="container" id='navbar'>
             <div class="justify-content-start">
@@ -44,7 +44,7 @@
                     <span class='align-bottom' id='cur-brand'>Caseygram</span>
                 </a>
             </div>
-
+{% if user.is_authenticated %}
             <div class="d-none d-md-block justify-content-center ">
                 <form action="{% url 'search-list' %}" method='GET'>
                     <input name='q' type='text' placeholder='Search...' class='form-control' id='search-bar' autocomplete="off">
@@ -94,9 +94,10 @@
                 </ul>
 
             </div>
+            {% endif %}
         </div>
   </nav>
-{% endif %}
+
 
 
 
