@@ -230,6 +230,7 @@ small {
 
 body {
     padding-top: 65px;
+    padding-bottom: 65px;
 }
 
 @media (min-width: 768px){
