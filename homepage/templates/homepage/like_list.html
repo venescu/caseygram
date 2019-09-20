@@ -1,6 +1,5 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
-    <div class="row justify-content-center pt-4">
     {% for like in object_list %}
     <div class='list-div'>
         <a href="{% url 'public-profile' like.liker.username %}" id='author-link'>
@@ -15,5 +14,4 @@
     <p> No likes on this post! </p>
     {% endfor %}
 
-</div>
 {% endblock content %}
