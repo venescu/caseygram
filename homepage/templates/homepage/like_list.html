@@ -1,7 +1,7 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
-    {% for like in object_list %}
     <div class="row justify-content-center pt-4">
+    {% for like in object_list %}
     <div class='list-div'>
         <a href="{% url 'public-profile' like.liker.username %}" id='author-link'>
            <img class='rounded-circle like-image' src="{{like.liker.profile.image.url}}"><b>{{ like.liker }} </b>
