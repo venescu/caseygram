@@ -1,5 +1,6 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
+<div class="row justify-content-center pt-4">
 
 {% if 'following' in request.path %}
         <h1>Following</h1>
@@ -26,7 +27,7 @@
         </div>
         {% endif %}
     {% endfor %}
-
+</div>
 
 {% endblock content %}
 
