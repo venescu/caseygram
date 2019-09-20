@@ -1,6 +1,7 @@
 {% extends 'homepage/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+<div class="row justify-content-center align-self-center">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="input-group mb-3">
@@ -10,5 +11,6 @@
             </div>
             </fieldset>
         </form>
+</div>
 {% endblock content %}
 
