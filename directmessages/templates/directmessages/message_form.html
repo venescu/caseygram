@@ -1,7 +1,8 @@
 {% extends 'homepage/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class='container'>
+    <div class="row justify-content-center pt-4">
+
         <form method="POST">
             {% csrf_token %}
             <fieldset class="row input-group mb-3 justify-content-center">
