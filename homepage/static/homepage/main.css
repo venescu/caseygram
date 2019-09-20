@@ -18,6 +18,10 @@
   text-decoration:none;
 }
 
+.comment-text {
+  word-wrap:break-word;
+}
+
 #black-link {
   color: black;
   text-decoration: none;
