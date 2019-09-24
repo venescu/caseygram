@@ -21,27 +21,31 @@
 </div>
 {% endfor %}
 <div><b id='explore-text'>Explore</b></div>
-<div class='row'>
-    <div class="container" id='explore-layout'>
+    <div class="row" id='explore-layout'>
         {% for p in posts %}
+        <div class='row'>
+            <div class='col-sm-4'>
+                <div class='card'>
             {% if p.images.count > 1 %}
                 {% for image in p.images.all %}
                     {% if forloop.counter0 == 0 %}
                         <a href="{% url 'post-detail' p.id %}" id="detail-link">
-                            <img id='explore-img' src='{{ image.modelimage.url }}' alt='images'>
+                            <img class='card-img-top img-fluid' src='{{ image.modelimage.url }}' alt='images'>
                         </a>
                     {% endif %}
                 {% endfor %}
             {% else %}
                 {% for image in p.images.all %}
                     <a href="{% url 'post-detail' p.id %}" id="detail-link">
-                        <img id='explore-img' src={{ image.modelimage.url }} alt='images'>
+                        <img class='card-img-top img-fluid' src='{{ image.modelimage.url }}' alt='images'>
                     </a>
                 {% endfor %}
             {% endif %}
-        {% endfor %}
+        </div>
     </div>
 </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
 
 

@@ -57,10 +57,9 @@
     background-color: #FAFAFA;
 }
 
-#explore-layout{
-    flex-wrap: wrap;
+/*#explore-layout{
     justify-content: center;
-}
+}*/
 
 #explore-img{
     width: 293px;
