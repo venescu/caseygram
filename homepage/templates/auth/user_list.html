@@ -28,7 +28,7 @@
     <div class='list-div'>
         <a href="{% url 'post-detail' i.pk %}" id='black-link'>
        <img class='w3-border like-image' src="{{ i.images.first.modelimage.url}}"><b> </b>
-       "{{i|truncatewords:5}}" by: {{i.author}}
+       "{{i|truncatechars:20}}" by: {{i.author}}
         </a>
     </div>
     {% endfor %}
