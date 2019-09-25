@@ -11,19 +11,19 @@
 {% for profile in profiles %}
 <div class='col-3 padding-0'>
     <div class='card'>
-        <div class='row'>
+
         <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
             {{profile.user.username}}
         </a>
-    </div>
-<div class='row'>
+        <br>
+
             {% if profile.user.username in followlist %}
                 <button type="button" id='{{ profile.user.pk }}' class="btn btn-secondary follow" bool='true' >Following</button>
             {% else %}
                 <button type="button" id='{{ profile.user.pk }}' class="btn follow-button follow" bool='false'>Follow</button>
             {% endif %}
-        </div>
+
 
 
 </div>
