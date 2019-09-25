@@ -246,3 +246,8 @@ body {
 .navbar-footer>li {          /* <- this affects just my footer navbar */
     display: inline-block;
 }
+
+#profile-posts{
+  margin-right: 20px;
+  margin-left: 20px;
+}
