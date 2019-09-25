@@ -2,6 +2,9 @@
   color:black;
 }
 
+.container{
+  height:100%;
+}
 
 #cur-brand {
     font-family: 'Kaushan Script', cursive;
