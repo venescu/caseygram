@@ -1,9 +1,11 @@
 {% extends 'homepage/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+    <row id='update-delete'>
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p}}
             <input type='submit' value='Update Post'>
         </form>
+    </row>
 {% endblock content %}

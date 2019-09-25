@@ -7,6 +7,10 @@
   min-height: 100%;
 }*/
 
+#update-delete{
+  margin-top: 25px;
+}
+
 #cur-brand {
     font-family: 'Kaushan Script', cursive;
     color: black;
