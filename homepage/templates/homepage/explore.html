@@ -14,9 +14,10 @@
 
         <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
+            <br>
             {{profile.user.username}}
         </a>
-        <br>
+
 
             {% if profile.user.username in followlist %}
                 <button type="button" id='{{ profile.user.pk }}' class="btn btn-secondary follow" bool='true' >Following</button>
