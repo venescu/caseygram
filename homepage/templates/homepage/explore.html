@@ -12,7 +12,7 @@
 <div class='col-3 padding-0'>
     <div class='card'>
 
-        <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
+        <a class='justify-content-center' href="{% url 'public-profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
             <br>
             {{profile.user.username}}
