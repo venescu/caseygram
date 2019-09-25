@@ -2,10 +2,16 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
 {% if profiles %}
+<div class='row'>
     <h6><strong> Newest accounts</strong></h6>
+</div>
 {% endif %}
+
+<div class='row'>
 {% for profile in profiles %}
-    <div class="d-inline-block align-items-center">
+<div class='col-3 padding-0'>
+    <div class='card'>
+
         <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
             {{profile.user.username}}
@@ -19,7 +25,9 @@
 
 
 </div>
+</div>
 {% endfor %}
+</div>
 <div><b id='explore-text'>Explore</b></div>
     <div class="row" id='profile'>
         {% for p in posts %}
