@@ -2,7 +2,6 @@
 {% load crispy_forms_tags %}
 {% block content %}
     <div class='row'>
-        <div class="container">
             <img class="rounded-circle account-img" src="{{ username.profile.image.url }}">
             {% if user == username %}
                 <a href="{% url 'profile' %}" id="profedit-link">
@@ -40,19 +39,20 @@
                 {% endif %}
             </div>
 <div id='postdivider'></div>
+</div>
     <div class='row'>
-    <div class="container padding-0" id='explore-layout'>
             {% for p in posts %}
+                <div class='col-4 padding-0'>
+                    <div class='card'>
                 {% for image in p.images.all %}
                     {% if forloop.counter0 == 0 %}
                     <a href="{% url 'post-detail' p.id %}" id="detail-link">
-                        <img id='explore-img' src={{ image.modelimage.url }} alt='images'>
+                        <img class='card-img-top img-fluid' src={{ image.modelimage.url }} alt='images'>
                     </a>
                     {% endif %}
                 {% endfor %}
+                </div>
+            </div>
             {% endfor %}
         </div>
-    </div>
-        </div>
-    </div>
 {% endblock content %}
