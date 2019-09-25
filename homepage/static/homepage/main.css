@@ -57,10 +57,12 @@
     background-color: #FAFAFA;
 }
 
-/*#explore-layout{
-    justify-content: center;
-}*/
+#explore-layout{
+    margin-left: : 0;
+    margin-right: 0;
+}
 
+/*
 #explore-img{
     width: 293px;
     height: 293px;
@@ -68,7 +70,7 @@
     margin-left: 14px;
     margin-top: 8px;
     margin-bottom: 20px;
-}
+}*/
 
 
 body{
@@ -117,12 +119,6 @@ ul li a{
 
 .post-buttons{
   color: #55CB93;
-}
-
-.navbar-toggler {
-  color: #55CB93;
-  position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
-left: -11px;
 }
 
 .input-mysize {
