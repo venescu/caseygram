@@ -26,6 +26,10 @@
   text-decoration:none;
 }
 
+#message-link {
+  text-decoration: none;
+}
+
 .comment-text {
   word-wrap:break-word;
 }
