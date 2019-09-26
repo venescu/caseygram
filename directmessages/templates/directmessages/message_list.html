@@ -4,10 +4,12 @@
         {% for message in sender_qs %}
             <a href="{% url 'message-form' message.sender.username %}" id='black-link'>
                 <div class='row' id='profile'>
+                    <div class='col align-self-center'>
                     <img class='rounded-circle like-image' src="{{message.sender.profile.image.url}}">
-                    <p> {{ message.sender }}  <strong>  {{ message.content|truncatewords:4 }}</strong></p>
+                    <p> {{ message.sender }}<strong>{{ message.content|truncatewords:4 }}</strong></p>
 
                 </div>
+            </div>
                 <div class='row justify-content-end' id='profile'>
                     <small>{{ message.date_created|date:"M d h:i A" }}</small>
                 </div>
