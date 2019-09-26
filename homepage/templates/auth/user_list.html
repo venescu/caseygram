@@ -14,12 +14,14 @@
 <h2>Users</h2>
     {% for i in object_list %}
     <div class='list-div'>
+      <li>
 
             <a href="{% url 'public-profile' i.username %}" id='author-link'>
                <img class='rounded-circle like-image' src="{{ i.profile.image.url}}"><b>{{ like.liker }} </b>
                {{i}}
 
             </a>
+          </li>
     </div>
     {% endfor %}
 {% endif %}
