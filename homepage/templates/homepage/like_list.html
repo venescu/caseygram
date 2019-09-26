@@ -4,7 +4,7 @@
 
     {% for like in object_list %}
     <div id='postdivider'></div>
-    <div class='list-div'>
+    <div class='notify-div'>
         <a href="{% url 'public-profile' like.liker.username %}" id='author-link'>
            <img class='rounded-circle like-image' src="{{like.liker.profile.image.url}}"><b>{{ like.liker }} </b>
         <small>
