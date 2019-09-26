@@ -13,15 +13,13 @@
 {% if object_list %}
 <h2>Users</h2>
     {% for i in object_list %}
-    <div class='list-div'>
-      <li>
+    <div class='row list-div'>
 
             <a href="{% url 'public-profile' i.username %}" id='author-link'>
                <img class='rounded-circle like-image' src="{{ i.profile.image.url}}"><b>{{ like.liker }} </b>
                {{i}}
 
             </a>
-          </li>
     </div>
     {% endfor %}
 {% endif %}
@@ -29,7 +27,7 @@
 {% if posts %}
     <h2>Posts</h2>
     {% for i in posts %}
-    <div class='list-div'>
+    <div class='row list-div'>
         <a href="{% url 'post-detail' i.pk %}" id='black-link'>
        <img class='w3-border like-image' src="{{ i.images.first.modelimage.url}}"><b> </b>
        "{{i|truncatechars:20}}" by: {{i.author}}
