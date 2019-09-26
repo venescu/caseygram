@@ -1,10 +1,10 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
-    <h1>Messages</h1>
+    <div class='row justify-content-center'> <h1>Messages</h1> </div>
         {% for message in sender_qs %}
             <a href="{% url 'message-form' message.sender.username %}" id='black-link'>
                 <div class='container'>
-                    <img class='rounded-circle like-image' src="{{message.sender.profile.image.url}}"> - {{ message.sender }} <strong>{{ message.content|truncatewords:6 }}</strong> {{ message.date_created|date:"M d Y h:i A" }}
+                    <img class='rounded-circle like-image' src="{{message.sender.profile.image.url}}"> - {{ message.sender }} <strong>{{ message.content|truncatewords:6 }}</strong> {{ message.date_created|date:"M d h:i A" }}
 
                 </div>
             </a>
