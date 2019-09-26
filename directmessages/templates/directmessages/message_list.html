@@ -9,7 +9,7 @@
 
                 </div>
                 <div class='row justify-content-end align-content-top' id='profile'>
-                    {{ message.date_created|date:"M d h:i A" }}
+                    <small>{{ message.date_created|date:"M d h:i A" }}</small>
                 </div>
             </a>
         {% empty %}
