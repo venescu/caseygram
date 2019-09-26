@@ -238,7 +238,7 @@ small {
 
 body {
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 85px;
 }
 
 @media (min-width: 768px){
@@ -250,6 +250,10 @@ body {
 
 .navbar-footer>li {          /* <- this affects just my footer navbar */
     display: inline-block;
+}
+
+.navbar-footer{
+  min-height: 85px;
 }
 
 #profile{
