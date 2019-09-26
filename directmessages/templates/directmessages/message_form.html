@@ -15,14 +15,14 @@
     </div>
     {% for message in receiver_message_objects %}
         {% if message.sender == user %}
-            <p class="container message-green-text">
+            <p class="container message-green-text text-wrap">
                 {{message.content}}
                 <i>{{message.date_created}}</i>
 
                  <a href="{% url 'public-profile' message.sender %}" id='message-link'><b>{{message.sender}}</b></a>
             </p>
         {% else %}
-            <p class="container message-white-text">
+            <p class="container message-white-text text-wrap">
                 <a href="{% url 'public-profile' message.sender %}" id='author-link'><b> {{message.sender}}</b></a>
                 <i>{{message.date_created}} </i>{{message.content}}
             </p>
