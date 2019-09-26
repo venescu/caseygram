@@ -2,8 +2,8 @@
 {% load caps %}
 {% load humanize %}
 {% block content %}
-        <img class="rounded-circle article-img" src= "{{ p.author.profile.image.url }}">
     <a href="{% url 'public-profile' p.author.username %}" id="author-link">
+        <img class="rounded-circle article-img" src= "{{ p.author.profile.image.url }}">
         <strong>{{ p.author }}</strong>
     </a>
         {% if p.images.count != 1 %}
@@ -103,7 +103,9 @@
                     <small>{{ p.date_posted|naturaltime|upper }}</small>
                 </p>
         </div>
-        <div class="comment-scroll">
+
+
+        <div>
 
         {% for comment in p.comments.all %}
         <div>
