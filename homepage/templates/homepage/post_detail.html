@@ -45,7 +45,7 @@
     {% else %}
         {% for image in p.images.all %}
                 <div>
-                    <img src="{{ image.modelimage.url }}" alt='image'>
+                    <img src="{{ image.modelimage.url }}" class="fit-image" alt='image'>
                 </div>
         {% endfor %}
 
