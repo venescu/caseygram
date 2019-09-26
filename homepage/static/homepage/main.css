@@ -238,7 +238,7 @@ small {
 
 body {
     padding-top: 65px;
-    padding-bottom: 85px;
+    padding-bottom: 75px;
 }
 
 @media (min-width: 768px){
@@ -253,7 +253,7 @@ body {
 }
 
 .navbar-footer{
-  min-height: 85px;
+  min-height: 75px;
 }
 
 #profile{
