@@ -1,4 +1,5 @@
 {% load humanize %}
+{% load caps %}
 {% if notice.description == 'follow' and not notice.actor == user %}
     <a href="{% url 'public-profile' notice.actor.username %}" id="author-link">
         <img class='rounded-circle like-image' src="{{notice.actor.profile.image.url}}">
