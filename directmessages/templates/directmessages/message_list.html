@@ -5,11 +5,11 @@
             <a href="{% url 'message-form' message.sender.username %}" id='black-link'>
                 <div class='row' id='profile'>
                     <img class='rounded-circle like-image' src="{{message.sender.profile.image.url}}">
-                    <span class='align-sub'> - {{ message.sender }} <strong>  {{ message.content|truncatewords:4 }}</strong> </span>
+                    <span class='middle'> - {{ message.sender }} <strong>  {{ message.content|truncatewords:4 }}</strong> </span>
 
                 </div>
                 <div class='row justify-content-end' id='profile'>
-                    <span class='align-top'>{{ message.date_created|date:"M d h:i A" }}</span>
+                    <span class='top'>{{ message.date_created|date:"M d h:i A" }}</span>
                 </div>
             </a>
         {% empty %}
