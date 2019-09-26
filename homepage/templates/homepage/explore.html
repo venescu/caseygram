@@ -7,12 +7,12 @@
 </div>
 {% endif %}
 
-<div class='row'  id='profile'>
+<div class='row justify-content-center'  id='profile'>
 {% for profile in profiles %}
 <div class='col-3 padding-0'>
     <div class='card'>
 
-        <a class='justify-content-center' href="{% url 'public-profile' profile.user.username %}" id='author-link'>
+        <a href="{% url 'public-profile' profile.user.username %}" id='author-link'>
             <img class='rounded-circle like-image' src="{{profile.image.url}}">
             <br>
             {{profile.user.username}}
