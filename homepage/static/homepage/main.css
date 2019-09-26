@@ -262,3 +262,8 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.notify-div{
+  padding-top: 4px;
+  padding-bottom:4px;
+}
