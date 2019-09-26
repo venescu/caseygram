@@ -2,7 +2,6 @@
 {% load caps %}
 {% load humanize %}
 {% block content %}
-    <div class='col-md-auto padding-0' id='post'>
         <img class="rounded-circle article-img" src= "{{ p.author.profile.image.url }}">
     <a href="{% url 'public-profile' p.author.username %}" id="author-link">
         <strong>{{ p.author }}</strong>
