@@ -15,8 +15,8 @@
     </div>
     {% for message in receiver_message_objects %}
         {% if message.sender == user %}
-        <div class='row text-wrap'>
-            <p class="message-green-text">
+        <div class='row'>
+            <p class="message-green-text text-wrap">
                 {{message.content}}
                 <i>{{message.date_created}}</i>
 
