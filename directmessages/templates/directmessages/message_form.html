@@ -19,11 +19,11 @@
                 {{message.content}}
                 <i>{{message.date_created}}</i>
 
-                 <b>{{message.sender}}</b>
+                 <a href="{% url 'public-profile' message.sender %}"><b>{{message.sender}}</b></a>
             </p>
         {% else %}
             <p class="container message-white-text">
-                <b> {{message.sender}}</b>
+                <a href="{% url 'public-profile' message.sender %}"><b> {{message.sender}}</b></a>
                 <i>{{message.date_created}} </i>{{message.content}}
             </p>
         {% endif %}
