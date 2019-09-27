@@ -23,7 +23,7 @@
                  <a href="{% url 'public-profile' message.sender %}" id='message-link'><b>{{message.sender}}</b></a>
             </p>
         {% else %}
-            <p class="container message-white-text text-wrap sb5">
+            <p class="message-white-text text-wrap sb5">
                 <a href="{% url 'public-profile' message.sender %}" id='author-link'><b> {{message.sender}}</b></a>
                 <b><i>{{message.date_created}} </i></b>{{message.content}}
             </p>
