@@ -2,7 +2,9 @@
 {% extends 'homepage/base.html' %}
 {% block content %}
 
+<div class='search-list'>
 {% if object_list and posts %}
+
 <div class='row justify-content-center'>
     <h1>Search Results for "<i>{{query}}"</i></h1>
 {% else %}
@@ -10,22 +12,18 @@
 {% endif %}
 </div>
 <div class='row'>
-  <div class='col'>
-</div>
+
 </div>
 
 {% if object_list %}
 <h2>Users</h2>
     {% for i in object_list %}
     <div class='row list-div' id='profile'>
-      <div class='col'>
-
             <a href="{% url 'public-profile' i.username %}" id='author-link'>
                <img class='rounded-circle like-image' src="{{ i.profile.image.url}}"><b>{{ like.liker }} </b>
                {{i}}
 
             </a>
-        </div>
     </div>
     {% endfor %}
 {% endif %}
@@ -42,5 +40,5 @@
     {% endfor %}
 
 {% endif %}
-
+</div>
 {% endblock content %}
