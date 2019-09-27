@@ -4,8 +4,9 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
+<div class='infinite-container'>
     {% for p in posts %}
+    <div class="infinite-item">
         {% for f in followers %}
 
                 {% if p.author.username == f.being_followed.username %}
@@ -142,11 +143,32 @@
             <div id='postdivider'></div>
     {% endif %}
     {% endfor %}
+</div>
     {% endfor %}
+</div>
 
+  <div class="loading" style="display: none;">
+    Loading...
+  </div>
 
-<!--pagination code below  -->
-    <div class='d-flex justify-content-center'>
+  {% if page_obj.has_next %}
+    <a class="infinite-more-link" href="?page={{ articles.next_page_number }}">More</a>
+  {% endif %}
+
+  <script>
+    var infinite = new Waypoint.Infinite({
+      element: $('.infinite-container')[0],
+      onBeforePageLoad: function () {
+        $('.loading').show();
+      },
+      onAfterPageLoad: function ($items) {
+        $('.loading').hide();
+      }
+    });
+  </script>
+
+<!-- pagination code below  -->
+  <!--  <div class='d-flex justify-content-center'>
     {% if is_paginated %}
         {% if page_obj.has_previous %}
 
@@ -171,7 +193,7 @@
         {% endif %}
     {% endif %}
 </div>
-
+ -->
 
 {% endblock content %}
 
