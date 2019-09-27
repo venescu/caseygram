@@ -107,7 +107,7 @@
 
         <div>
 
-        {% for comment in p.comments.all %}
+        {% for comment in p.comments.all reversed %}
         <div>
             <a href="{% url 'public-profile' comment.author.username %}" id="author-link" id="author-link">
                 <b>  {{ comment.author }}</b>
