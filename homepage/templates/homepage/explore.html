@@ -31,10 +31,13 @@
 </div>
 {% endfor %}
 </div>
+
+
 <div><b id='explore-text'>Explore</b></div>
-    <div class="row" id='profile'>
+
+    <div class="row infinite-container" id='profile'>
         {% for p in posts %}
-            <div class='col-4 padding-0'>
+            <div class='col-4 padding-0 infintite-item'>
                 <div class='card'>
             {% if p.images.count > 1 %}
                 {% for image in p.images.all %}
@@ -55,6 +58,16 @@
     </div>
         {% endfor %}
     </div>
+
+
+  <div class="loading" style="display: none;">
+    Loading...
+  </div>
+
+  {% if page_obj.has_next %}
+    <a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}">More</a>
+  {% endif %}
+
 {% endblock content %}
 
 
