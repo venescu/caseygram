@@ -4,7 +4,7 @@
 <div class="row justify-content-center pt-4">
         <form method="POST">
             {% csrf_token %}
-            <fieldset class="input-group mb-3">
+            <fieldset class="input-group mb-3" i>
                 {{ form.content }}
             <div class='input-group-append'>
                 <button class='btn btn-outline-info' type='submit' >Post</button>
@@ -12,13 +12,5 @@
             </fieldset>
         </form>
 </div>
-
-<script type="text/javascript">
-function FocusOnInput()
-{
-     document.getElementById("id_content").focus();
-}
-</script>
-
 {% endblock content %}
 
