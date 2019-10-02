@@ -10,7 +10,7 @@ def upper(value):
     if ',' in value:
         return value.split(',')[0].upper()
     else:
-        return value.upper() + ' AGO'
+        return value.upper()
 
 
 upper.is_safe = True
