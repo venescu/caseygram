@@ -10,7 +10,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.db import transaction
 from django.urls import reverse_lazy, reverse
-from django.db.models import Q
 from django.forms import modelformset_factory
 from django.contrib import messages
 # third- request looks for appropriate function to match and executes it (in this case it is an http response)
