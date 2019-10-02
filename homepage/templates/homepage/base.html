@@ -177,7 +177,7 @@
 
 
     <script type="text/javascript">
-    $('.likebutton').click(function(){
+    $('.likebutton').on('click', function(){
         var catid;
         catid = $(this).attr("data-catid");
         $.ajax(
@@ -219,7 +219,7 @@
     </script>
 
     <script type="text/javascript">
-    $('.follow').live("click", " function(){
+    $('.follow').click(function(){
         var id;
         id = $(this).attr("id");
         var bool;
