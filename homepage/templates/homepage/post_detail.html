@@ -100,7 +100,7 @@
         <div class='mb-0'><p class='mb-0'><a href="{% url 'public-profile' p.author.username %}" id="author-link"><b>{{ p.author }}</b></a> {{ p.caption }}</p></div>
         <div id='postdivider'>
                 <p id="post-detail-time">
-                    <small>{{ p.date_posted|naturaltime|upper }}</small>
+                    <small>{{ p.date_posted|naturaltime }}</small>
                 </p>
         </div>
 
@@ -113,7 +113,7 @@
                 <b>  {{ comment.author }}</b>
             </a>
             {{ comment.content }}
-            <small>{{ comment.date_created|naturaltime|upper }}</small>
+            <small>{{ comment.date_created|naturaltime }}</small>
             {% if comment.author == user %}
 
                 <button class="btn btn-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
