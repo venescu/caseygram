@@ -1,7 +1,6 @@
 from django import forms
 from django.forms import inlineformset_factory
 from .models import Post, PostImage, Comment
-from django.utils.translation import ugettext as _
 
 
 class CommentForm(forms.ModelForm):
@@ -28,8 +27,9 @@ class ImageForm(forms.ModelForm):
         model = PostImage
         fields = ['modelimage', ]
         labels = {
-            'modelimage': _('ffs'),
+            'modelimage': "changed"
         }
+
 
     # def __init__(self, *args, **kwargs):
     #     super().__init__(*args, **kwargs)
