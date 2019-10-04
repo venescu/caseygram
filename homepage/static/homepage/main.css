@@ -2,8 +2,8 @@
   color:black;
 }
 
-.col-form-label {
-  type= hidden;
+label.col-form-label {
+  display: none;
 }
 
 #update-delete{
