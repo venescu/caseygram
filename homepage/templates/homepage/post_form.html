@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="row justify-content-center pt-4">
-    <div class='col-12 center-block'>
+
 
 <form id="post_form" method="post" action="" enctype="multipart/form-data">
     {% csrf_token %}
@@ -10,9 +10,9 @@
     {% for hidden in postForm.hidden_fields %}
         {{ hidden }}
     {% endfor %}
-
+    <p>Caption</p>
     {% for field in postForm %}
-        {{ field }} <br />
+     {{ field }} <br />
     {% endfor %}
     <h5> To submit a post, a photo must be attached to first image box </h5>
 
