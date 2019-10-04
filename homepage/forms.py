@@ -23,11 +23,12 @@ class PostForm(forms.ModelForm):
 
 class ImageForm(forms.ModelForm):
 
-    auto_id = False
-
     class Meta:
         model = PostImage
         fields = ['modelimage', ]
+        labels = {
+            'modelimage': "",
+        }
 
     # def __init__(self, *args, **kwargs):
     #     super().__init__(*args, **kwargs)
