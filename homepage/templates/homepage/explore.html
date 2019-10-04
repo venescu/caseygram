@@ -35,9 +35,11 @@
 
 <div><b id='explore-text'>Explore</b></div>
 
-    <div class="row infinite-container" id='profile'>
+    <div class="row" id='profile'>
+        <div class="infinite-container">
         {% for p in posts %}
-            <div class='col-4 padding-0 infintite-item'>
+        <div class='infintite-item'>
+            <div class='col-4 padding-0'>
                 <div class='card'>
             {% if p.images.count > 1 %}
                 {% for image in p.images.all %}
@@ -56,8 +58,10 @@
             {% endif %}
         </div>
     </div>
+</div>
         {% endfor %}
     </div>
+</div>
 
 
   <div class="loading" style="display: none;">

@@ -20,7 +20,7 @@ class PostListView(LoginRequiredMixin, ListView):
     template_name = 'homepage/home.html'
     ordering = ['-date_posted']
     context_object_name = 'posts'
-    paginate_by = 1
+    paginate_by = 5
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
