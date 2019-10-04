@@ -26,10 +26,6 @@ class ImageForm(forms.ModelForm):
     class Meta:
         model = PostImage
         fields = ['modelimage', ]
-        labels = {
-            'modelimage': "changed"
-        }
-
 
     # def __init__(self, *args, **kwargs):
     #     super().__init__(*args, **kwargs)
