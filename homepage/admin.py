@@ -4,7 +4,7 @@ from .models import Post, PostImage, Comment, Like
 
 class PostImageInLine(admin.TabularInline):
     model = PostImage
-    extra = 3
+    extra = 4
 
 
 class PostAdmin(admin.ModelAdmin):

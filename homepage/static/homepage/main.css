@@ -6,6 +6,11 @@ label.col-form-label {
   display: none;
 }
 
+button.post {
+  background-color: #55CB93;
+  border: none;
+}
+
 #update-delete{
   margin-top: 150px;
 }
@@ -71,15 +76,6 @@ label.col-form-label {
     margin-right: 0;
 }
 
-/*
-#explore-img{
-    width: 293px;
-    height: 293px;
-    margin-right: 14px;
-    margin-left: 14px;
-    margin-top: 8px;
-    margin-bottom: 20px;
-}*/
 
 
 body{
@@ -205,11 +201,7 @@ small {
   postion:relative;
   border: black solid 1px;
 }
-.comment-scroll {
-  max-height: 220px;
-  overflow-y: scroll;
-  margin-bottom: 35px;
-}
+
 
 .post-detail-comment{
   margin-bottom: 0px;
