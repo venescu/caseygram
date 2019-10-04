@@ -23,13 +23,15 @@ class PostForm(forms.ModelForm):
 
 class ImageForm(forms.ModelForm):
 
+    auto_id = False
+
     class Meta:
         model = PostImage
         fields = ['modelimage', ]
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['modelimage'].widget.attrs.update({'auto_id': 'False'})
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['modelimage'].widget.attrs.update({'auto_id': 'False'})
         # this overwrites the input for content field and lets you update attrs of that input <input>
 
 
