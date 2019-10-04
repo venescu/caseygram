@@ -27,7 +27,7 @@ class ImageForm(forms.ModelForm):
         model = PostImage
         fields = ['modelimage', ]
         labels = {
-            'modelimage': "ffs",
+            'modelimage': _('ffs'),
         }
 
     # def __init__(self, *args, **kwargs):
