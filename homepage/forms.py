@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import inlineformset_factory
 from .models import Post, PostImage, Comment
+from django.utils.translation import ugettext as _
 
 
 class CommentForm(forms.ModelForm):
