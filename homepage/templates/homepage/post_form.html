@@ -19,6 +19,7 @@
 
     {{ formset.management_form }}
     {% for form in formset %}
+            <label class="sr-only" for="{{ field.name }}">{{ field.label }}</label>
         {{ form|crispy }}
     {% endfor %}
 
