@@ -29,7 +29,7 @@ class ImageForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['label'].widget.attrs.update({'text': ''})
+        self.fields['label'].widget.attrs.update({'content': ''})
         # this overwrites the input for content field and lets you update attrs of that input <input>
 
 
