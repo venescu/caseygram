@@ -2,10 +2,9 @@
   color:black;
 }
 
-/*.container{
-  height:100%;
-  min-height: 100%;
-}*/
+label.col-form-label {
+  type='hidden';
+}
 
 #update-delete{
   margin-top: 150px;
