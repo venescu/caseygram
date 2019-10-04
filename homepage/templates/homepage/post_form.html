@@ -11,11 +11,11 @@
     {% for hidden in postForm.hidden_fields %}
         {{ hidden }}
     {% endfor %}
-    <p><h1>Caption</h1></p>
+    <p><h4>Caption</h4></p>
     {% for field in postForm %}
      {{ field }} <br />
     {% endfor %}
-    <small> To submit a post, a photo must be attached to first image box </small>
+    <small> To submit a post, a photo must be attached to first image box! </small>
 
     {{ formset.management_form }}
     {% for form in formset %}
