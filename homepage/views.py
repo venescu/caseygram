@@ -12,6 +12,7 @@ from django.db import transaction
 from django.urls import reverse_lazy, reverse
 from django.forms import modelformset_factory
 from django.contrib import messages
+from django.db.models import Q
 # third- request looks for appropriate function to match and executes it (in this case it is an http response)
 
 
@@ -20,7 +21,7 @@ class PostListView(LoginRequiredMixin, ListView):
     template_name = 'homepage/home.html'
     ordering = ['-date_posted']
     context_object_name = 'posts'
-    paginate_by = 1
+    paginate_by = 6
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
