@@ -50,3 +50,4 @@ def create_objects(sender, instance, created, **kwargs):
 #     qs = Notification.objects.get(target_object_id=instance.pk, target_content_type=ContentType.objects.get_for_model(instance))
 #     qs.delete()
 #
+# broke on initially letting people use it. Someone tried to submit a comment over 255. It through a 500 error, comment still created, but no notification. When i tried to delete a user whose pictures was commented on it threw a 500 error coudl not find notfcaiton for query. so i took out the notiofcation deletion code above. Shouldnt be too detrimental but should fix.
