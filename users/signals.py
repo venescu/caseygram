@@ -49,3 +49,4 @@ def create_objects(sender, instance, created, **kwargs):
 # def delete_notifications(sender, instance, **kwargs):
 #     qs = Notification.objects.get(target_object_id=instance.pk, target_content_type=ContentType.objects.get_for_model(instance))
 #     qs.delete()
+#
