@@ -42,10 +42,10 @@ def create_objects(sender, instance, created, **kwargs):
         Comment.objects.create(post=post, author=caseygramMainUser, content='Here is your first comment!')
 
 
-@receiver(pre_delete, sender=Like)
-@receiver(pre_delete, sender=Comment)
-@receiver(pre_delete, sender=Message)
-@receiver(pre_delete, sender=Follower)
-def delete_notifications(sender, instance, **kwargs):
-    qs = Notification.objects.get(target_object_id=instance.pk, target_content_type=ContentType.objects.get_for_model(instance))
-    qs.delete()
+# @receiver(pre_delete, sender=Like)
+# @receiver(pre_delete, sender=Comment)
+# @receiver(pre_delete, sender=Message)
+# @receiver(pre_delete, sender=Follower)
+# def delete_notifications(sender, instance, **kwargs):
+#     qs = Notification.objects.get(target_object_id=instance.pk, target_content_type=ContentType.objects.get_for_model(instance))
+#     qs.delete()
