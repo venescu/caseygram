@@ -47,3 +47,5 @@ caseygram is deployed on Heroku.
 * Use AWS Lambda to resize my current S3 bucket images to smaller formats
 * Fix notification server error with comment deletion
 * alternate new account image so there is not 100 of the same image.
+* formatting the comment system to not spill over the container
+* comment text field on image page. and use ajax to submit comment and update in real time
