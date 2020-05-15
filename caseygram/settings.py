@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 
-ALLOWED_HOSTS = ['*.caseygram.herokuapp.com']
+ALLOWED_HOSTS = ['.caseygram.herokuapp.com']
 
 
 # Application definition
@@ -148,13 +148,15 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
-DEBUG = True
+DEBUG = os.environ.get("DEBUG_VALUE", False)
 
-
+# for s3
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 AWS_S3_REGION_NAME = 'us-east-2'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+
+#auto sets configs for postgres db on heroku
 django_heroku.settings(locals())
