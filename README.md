@@ -48,12 +48,12 @@ chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
 ```
 get_random_string(50, chars)
 ```
-  **and lastly**
+  **and then**
 ```
 quit()
 ```
 
-8. Copy this result and in your petsygram/petsygram/setting.py file replace
+8. Copy this result and in your caseygram/caseygram/settings.py file replace
 ```
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 ```
@@ -77,7 +77,8 @@ pip install -r requirements.txt
 python manage.py makemigrations
 ```
 
-12. When this has completed, run these migrations
+12. 
+Then run these migrations
 ```
 python manage.py migrate
 ```
@@ -92,8 +93,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-15. If there were no errors anywhere, you can now go to http://localhost:8000/
-in your browser to view a caseygram
+15. Now go to http://localhost:8000/ in your browser to view caseygram
 
 
 
