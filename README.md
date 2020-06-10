@@ -6,17 +6,14 @@ caseygram is a Instagram clone built using Django, Bootstrap, and jQuery. I recr
 
 cd projects
 ```
-
 2. Download a copy
 ```
 git clone https://github.com/cdelange/caseygram.git
 ```
-
 3. Install a virtual environment
 ```
 pip install virtualenv
 ```
-
 4. Make a folder for your virtual environments e.g.
 ```
 mkdir ~/venvs
