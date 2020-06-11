@@ -59,7 +59,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 ```
   **with**
 ```
-SECRET_KEY = 'your newly generated secret key here'
+SECRET_KEY = 'generated key'
 ```
 
 9. Go into the directory containing 'requirements.txt'
