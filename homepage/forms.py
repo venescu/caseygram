@@ -8,11 +8,6 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['content']
-        widgets = {
-            'content': forms.Textarea(attrs={
-                'max_length': '500',
-            }),
-        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
