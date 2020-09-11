@@ -125,7 +125,6 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -159,5 +158,5 @@ AWS_S3_REGION_NAME = 'us-east-2'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
-#auto sets configs for postgres db on heroku
+# auto sets configs for postgres db on heroku
 django_heroku.settings(locals())
