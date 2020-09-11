@@ -1,4 +1,4 @@
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import post_save, pre_delete
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from .models import Profile, Follower
@@ -34,7 +34,7 @@ def create_follower(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def create_objects(sender, instance, created, **kwargs):
     caseygramMainUser = User.objects.get(id=1)
-    randomImageArray = ['random_image/image1.jpg', 'random_image/image2.jpg', 'random_image/image3.jpg', 'random_image/image4.jpg', 'random_image/image5.jpg', 'random_image/image6.jpg', 'random_image/image7.jpg', 'random_image/image8.jpg', 'random_image/image9.jpg', 'random_image/image10.jpg' ]
+    randomImageArray = ['random_image/image1.jpg', 'random_image/image2.jpg', 'random_image/image3.jpg', 'random_image/image4.jpg', 'random_image/image5.jpg', 'random_image/image6.jpg', 'random_image/image7.jpg', 'random_image/image8.jpg', 'random_image/image9.jpg', 'random_image/image10.jpg']
     randomImage1 = random.choice(randomImageArray)
     randomImage2 = random.choice(randomImageArray)
     randomImage3 = random.choice(randomImageArray)
@@ -49,12 +49,13 @@ def create_objects(sender, instance, created, **kwargs):
         Comment.objects.create(post=post, author=caseygramMainUser, content='Here is your first comment!')
 
 
-# @receiver(post_delete, sender=Like)
-# @receiver(post_delete, sender=Comment)
-# @receiver(post_delete, sender=Message)
-# @receiver(post_delete, sender=Follower)
-# def delete_notifications(sender, instance, **kwargs):
-#     qs = Notification.objects.get(target_object_id=instance.pk, target_content_type=ContentType.objects.get_for_model(instance))
-#     qs.delete()
-#
-# broke on initially letting people use it. Someone tried to submit a comment over 255. It through a 500 error, comment still created, but no notification. When i tried to delete a user whose pictures was commented on it threw a 500 error coudl not find notfcaiton for query. so i took out the notiofcation deletion code above. Shouldnt be too detrimental but should fix.
+@receiver(pre_delete, sender=Like)
+@receiver(pre_delete, sender=Comment)
+@receiver(pre_delete, sender=Message)
+@receiver(pre_delete, sender=Follower)
+def delete_notifications(sender, instance, **kwargs):
+    qs = Notification.objects.get(target_object_id=instance.pk, target_content_type=ContentType.objects.get_for_model(instance))
+    qs.delete()
+
+
+broke on initially letting people use it. Someone tried to submit a comment over 255. It through a 500 error, comment still created, but no notification. When i tried to delete a user whose pictures was commented on it threw a 500 error coudl not find notfcaiton for query. so i took out the notiofcation deletion code above. Shouldnt be too detrimental but should fix.
