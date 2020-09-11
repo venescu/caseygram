@@ -43,4 +43,4 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler500 = 'caseygram.homepage.views.PostListView'
+handler500 = 'caseygram.homepage.views.handler500'

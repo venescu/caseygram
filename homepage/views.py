@@ -255,3 +255,10 @@ class LikeListView(LoginRequiredMixin, ListView):
         qs = super().get_queryset()
         # filter by var from captured url
         return qs.filter(post__pk=self.kwargs['pk'])
+
+
+def handler500(request,exception):
+    response =  HttpResponseServerError('home.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
