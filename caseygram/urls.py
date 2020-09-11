@@ -42,5 +42,3 @@ urlpatterns = [
 # google serving media static during development django
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-handler500 = 'caseygram.homepage.views.handler500'
