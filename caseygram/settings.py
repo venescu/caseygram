@@ -147,7 +147,9 @@ ADMINS = [('Casey', 'casey.delange@gmail.com')]
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = '8lu*6g0lg)9z!ba+a$ehk)xt)x%rxgb$i1&amp;022shmi1jcgihb*'
 DEBUG = os.environ.get("DEBUG_VALUE", False)
 
 # for s3
